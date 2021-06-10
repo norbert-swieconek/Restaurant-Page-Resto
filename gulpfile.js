@@ -25,7 +25,7 @@ gulp.task('build-vendor-js', function () {
         .pipe(gulp.dest('dist/js'));
 });
 
-// Adding html to dsit
+// Adding html to dist
 
 gulp.task('html', function() {
     return gulp.src(['./*.html'])
