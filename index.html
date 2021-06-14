@@ -24,7 +24,7 @@
 
 <body>
 
-  <!-- nav-with-banner -->
+  <!-- Nav-with-banner -->
   <header>
 
     <!-- navigation bar -->
@@ -46,7 +46,9 @@
       </div>
 
       <!-- logo -->
-      <a class="nav__logo" href="#"><img src="img/logo.png" alt="logo"></a>
+      <a class="logo" href="#">
+        <img class="logo__image" src="img/logo.png" alt="logo">
+      </a>
 
       <!-- right site  -->
       <div class="containerRight">
@@ -104,31 +106,158 @@
     </div>
   </header>
 
-  <div class="welcome">
-    <div>
-      <img src="img/hero-2.jpg" alt="welcome">
-    </div>
-    <div>
-      <p>About</p>
-      <h1>Welcome to Resto</h1>
-      <p></p>
-      <h2>Special Recipe</h2>
-      <div>
-        <div>
-          <img src="img/hero-1.jpg" alt="">
-          <p>Australian Organic Beef</p>
+  <main>
+    <div class="welcome">
+
+      <!-- Image -->
+      <div class="welcomeLeft">
+        <img class="welcomeLeft__image" src="img/hero-2.jpg" alt="welcome">
+      </div>
+
+      <!-- About-and-special-recipe -->
+      <div class="welcomeRight">
+
+        <!-- About -->
+        <div class="aboutContainer">
+          <p class="aboutContainer__about">About</p>
+          <h1 class="aboutContainer__header">Welcome to Resto</h1>
+          <p class="aboutContainer__text">On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
         </div>
-        <div>
-          <img src="img/hero-1.jpg" alt="">
-          <p>Australian Organic Beef</p>
-        </div>
-        <div>
-          <img src="img/hero-1.jpg" alt="">
-          <p>Australian Organic Beef</p>
+
+        <!-- Special-recipe -->
+        <div class="recipeContainer">
+          <h2 class="recipeContainer__header">Special Recipe</h2>
+
+          <!-- Container-with-images-and-short-text -->
+          <div class="welcomeSpecialRecipe">
+            <div class="welcomeLinkContainer">
+              <a href="#" class="welcomeLinkRecipe">
+                <img class="welcomeLinkRecipe__image" src="img/hero-1.jpg" alt="">
+                <p class="welcomeLinkRecipe__paragraph">Australian Organic<br> Beef</p>
+              </a>
+            </div>
+            <div class="welcomeLinkContainer">
+              <a href="#" class="welcomeLinkRecipe">
+                <img class="welcomeLinkRecipe__image" src="img/hero-1.jpg" alt="">
+                <p class="welcomeLinkRecipe__paragraph">Australian Organic<br> Beef</p>
+              </a>
+            </div>
+            <div class="welcomeLinkContainer">
+              <a href="#" class="welcomeLinkRecipe">
+                <img class="welcomeLinkRecipe__image" src="img/hero-1.jpg" alt="">
+                <p class="welcomeLinkRecipe__paragraph">Australian Organic<br> Beef</p>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="specialDishesContainer">
+
+      <!-- first-dish -->
+      <div class="specialDishesFirst">
+        <div class="specialDishesHeader">
+          <p class="specialDishesHeader__paragraph">Specialties</p>
+          <h1 class="specialDishesHeader__theme">Special Dishes</h1>
+        </div>
+        <div class="specialDishesContent">
+
+          <!-- left-side -->
+          <div class="specialDishesContentLeft">
+            <div class="dishesNumber">
+              <h1 class="dishesNumber__theme">01.</h1>
+              <p class="dishesNumber__paragraph"></p>
+            </div> 
+            <div class="dishesContent">
+              <h2 class="dishesContent__beef">Beef</h2>
+              <h2 class="dishesContent__steak">Steak Sauce</h2>
+              <p class="dishesContent__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Dicta explicabo incidunt obcaecati vitae debitis fugiat magnam,<br> possimus exercitationem! Debitis et quasi vel, ipsa eius culpa.<br> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Provident id vitae architecto qui molestiae quos maxime<br> accusamus debitis eum voluptatibus.</p>
+              <h2 class="dishesContent__price">$15.00</h2>
+              <button class="dishesContent__button">Book A Table</button>
+            </div>
+          </div>
+
+          <!-- right-side -->
+          <div class="specialDishesContentRight">
+            <img class="specialDishesContentRight__image" src="img/steak.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- second-dish -->
+      <div class="specialDishesSecond">
+        <div class="specialDishesContent">
+
+          <!-- right-side -->
+          <div class="specialDishesContentLeft">
+            <div class="dishesNumber">
+              <h1 class="dishesNumber__theme">02.</h1>
+              <p class="dishesNumber__paragraph"></p>
+            </div> 
+            <div class="dishesContent">
+              <h2 class="dishesContent__beef">Salmon</h2>
+              <h2 class="dishesContent__steak">Zucchini</h2>
+              <p class="dishesContent__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Dicta explicabo incidunt obcaecati vitae debitis fugiat magnam,<br> possimus exercitationem! Debitis et quasi vel, ipsa eius culpa.<br> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Provident id vitae architecto qui molestiae quos maxime<br> accusamus debitis eum voluptatibus.</p>
+              <h2 class="dishesContent__price">$12.00</h2>
+              <button class="dishesContent__button">Book A Table</button>
+            </div>
+          </div>
+
+          <!-- left-side -->
+          <div class="specialDishesContentRight">
+            <img class="specialDishesContentRight__image" src="img/salmon-zucchini.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menuContainer">
+
+      <!-- theme-header -->
+      <div class="menuHeader">
+        <p class="menuHeader__paragraph">Specialties</p>
+        <h1 class="menuHeader__theme">Our Menu</h1>
+      </div>
+
+      <!-- main-menu -->
+      <div class="breakfast">
+        <div class="breakfastFirst">
+          <h2 class="breakfastFirst__theme">Breakfast</h2>
+          <div class="breakfastFirst__one">
+            <img class="breakfastFirst__one--image" src="img/breakfast-1.jpg" alt="">
+            <div>
+              <p class="breakfastFirst__one--name">Egg Sandwich</p>
+              <p class="breakfastFirst__one--caption">Meat Ball, Mie</p>
+            </div>
+              <p class="breakfastFirst__one--price">$30</p>
+          </div>
+          <div class="breakfastFirst__two">
+            <img src="img/breakfast-1.jpg" alt="">
+            <div>
+              <p>Egg Sandwich</p>
+              <p>$30</p>
+            </div>
+            <p>Meat Ball, Mie</p>
+          </div>
+          <div class="breakfastFirst__three">
+            <img src="img/breakfast-1.jpg" alt="">
+            <div>
+              <p>Egg Sandwich</p>
+              <p>$30</p>
+            </div>
+            <p>Meat Ball, Mie</p>
+          </div>
+        </div>
+        <div class="breakfastSecond">
+          
+        </div>
+        <div class="breakfastThird">
+          
+        </div>
+      </div>
+    </div>
+  </main>
   
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>

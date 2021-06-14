@@ -1,8 +1,10 @@
-    header {
+@import "variables";
+
+header {
     
     // navigation-bar
     .nav {
-        padding: 20px 0 20px 0;
+        padding: 1.25rem 0 1.25rem 0;
 
         // left-menu
         .containerLeft {
@@ -16,8 +18,8 @@
                     &__link {
                         color: black;
                         text-decoration: none;
-                        font-size: 20px;
-                        font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+                        font-size: 1.25rem;
+                        font-family: $font-family;
                     }
 
                     &__link:hover {
@@ -28,8 +30,11 @@
         }
 
         // logo
-        img {
-            width: 130px;
+        .logo {
+
+            &__image {
+                width: 8.125rem;
+            }
         }
 
         // right-menu
@@ -44,8 +49,8 @@
                     &__link {
                         color: black;
                         text-decoration: none;
-                        font-size: 20px;
-                        font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;  
+                        font-size: 1.25rem;
+                        font-family: $font-family;  
                     }
 
                     &__link:hover {
@@ -62,51 +67,51 @@
         // left-site
         .leftBanner {
             &__header {
-                font-size: 64px;
+                font-size: 4rem;
                 margin: 0;
                 font-weight: lighter;
-                font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-                padding-left: 200px;    
+                font-family: $font-family;
+                padding-left: 12.5rem;    
             }
 
             // explore and video buttons
             .leftBannerButtons {
-                padding-left: 200px; 
+                padding-left: 12.5rem; 
 
                 &__red {
-                    font-size: 18px;
-                    background-color: #E22104;
+                    font-size: 1.125rem;
+                    background-color: #F34949;
                     border: none;
-                    padding: 8px 22px 8px 22px;
+                    padding: 0.5rem 1.375rem 0.5rem 1.375rem;
                     color: white;
-                    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+                    font-family: $font-family;
                     font-weight: bold;
-                    margin-right: 0px;
-                    border-radius: 20px;
+                    margin-right: 0;
+                    border-radius: 1.25rem;
                 }
 
                 &__red:hover {
-                    background-color: #D11003;
+                    background-color: #E23838;
                     cursor: pointer;
                 }
 
                 &__white {
-                    font-size: 18px;
+                    font-size: 1.125rem;
                     border: none;
-                    padding: 8px 22px 8px 22px;
+                    padding: 0.5rem 1.375rem 0.5rem 1.375rem;
                     color: black;
-                    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+                    font-family: $font-family;
                     font-weight: bold;
-                    border-radius: 5px;
+                    border-radius: 0.313rem;
 
                     &--videoLogo {
-                        padding-right: 5px;
+                        padding-right: 0.313rem;
                     }
                 }
 
                 &__white:hover {
                     cursor: pointer;
-                    color: red;
+                    color: #F34949;
                 }
 
                 &__white:hover {
@@ -115,19 +120,19 @@
             }
 
             .leftBannerParagraphs {
-                padding-left: 200px;
-                font-size: 22px;
+                padding-left: 12.5rem;
+                font-size: 1.375rem;
                 font-weight: bold;
-                font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+                font-family: $font-family;
 
                 &__theme {  
                     margin: 0;
                 }
 
                 .leftBannerFood {
-                    border-left: 1px solid #bfc7cf;
-                    border-right: 1px solid #bfc7cf;
-                    padding: 0 20px 0 20px;
+                    border-left: 0.063rem solid #bfc7cf;
+                    border-right: 0.063rem solid #bfc7cf;
+                    padding: 0 1.25rem 0 1.25rem;
                 }
             }
         }
@@ -135,11 +140,307 @@
         // right-site
         &__right {
             height: 70vh;
+            padding-left: 3.125rem;
+            display: block;
+            
 
             img {
-                padding-right: 200px;
                 max-width: 100%;
-                height: auto;
+                height: 100%;
+                padding-right: 12.5rem;
+            }
+        }
+    }
+}
+
+main {
+    .welcome {
+        margin-top: 8.125rem;
+
+        .welcomeLeft {
+            padding-left: 12.5rem;
+            height: 75vh;
+            margin-right: 3.125rem;
+           
+            &__image {
+                max-width: 100%;
+                height: 100%;   
+            }
+        }
+
+        .welcomeRight {
+            padding-right: 12.5rem;
+            padding-top: 6.25rem;
+
+            .aboutContainer{
+
+                &__about {
+                    color: #F34949;
+                    font-size: 1.25rem;
+                    font-family: $font-family;
+                    margin: 0;
+                    line-height: 0.625rem;
+                }
+
+                &__header {
+                    font-family: $font-family;
+                    margin: 0;
+                }
+
+                &__text {
+                    font-family: $font-family;
+                    font-size: 1.25rem;
+                }
+            }
+
+            .recipeContainer{
+
+                &__header {
+                    font-family: $font-family;
+                    font-size: 1.75rem;
+                }
+
+                .welcomeSpecialRecipe {
+
+                    .welcomeLinkContainer {
+
+                        .welcomeLinkRecipe {
+
+                            text-decoration: none;
+
+                            &__image {
+                                height: 11.25rem;
+                                width: 11.25rem;
+                            }
+
+                            &__paragraph {
+                                color: #F34949;
+                                font-family: $font-family;
+                                font-size: 1.25rem;
+                                line-height: 1.25rem;
+                                margin: 10px;
+                            }
+
+                            &__paragraph:hover {
+                                color: #E23838;
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+    }
+
+    .specialDishesContainer {
+        padding-left: 12.5rem;
+        padding-right: 12.5rem;
+        margin-bottom: 100px;
+        
+
+        .specialDishesFirst {
+            font-family: $font-family;
+            margin-top: 6.25rem;
+
+            .specialDishesHeader {
+                
+                &__paragraph {
+                    margin: 0;
+                    color: #F34949;
+                    font-size: 1.25rem;
+                    line-height: 0.625rem;
+                }
+
+                &__theme {
+                    margin: 0;
+                    font-size: 2.188rem;
+                }
+            }
+
+            .specialDishesContent {
+
+                .specialDishesContentLeft {
+
+                    .dishesNumber {
+
+                        &__theme {
+                            font-size: 3.75rem;
+                        }
+
+                        &__paragraph {
+                            width: 11.25rem;
+                            border-bottom: 0.063rem black solid;
+                            margin-left: 1.25rem;
+                        }
+                    }
+
+                    .dishesContent {
+                        padding-left: 5.938rem;
+
+                        &__beef {
+                            margin: 0;
+                            color: #F34949;
+                            font-size: 1.875rem;
+                            line-height: 0.8;
+                        }
+
+                        &__steak {
+                            margin: 0;
+                            font-size: 1.875rem;
+                        }
+
+                        &__text {
+                            font-size: 1.25rem;
+                            margin: 0.938rem 0 0.938rem 0;
+                        }
+
+                        &__price {
+                            font-size: 1.875rem;
+                            margin: 0 0 1.875rem 0;
+                        }
+
+                        &__button {
+                            border: none;
+                            padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+                            border-radius: 1.25rem;
+                            font-size: 1.25rem;
+                            color: white;
+                            background-color: #F34949;
+                        }
+
+                        &__button:hover {
+                            background-color: #E23838;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .specialDishesContentRight {
+
+                    &__image {
+                        max-width: 100%;
+                        height: 100%;      
+                    }
+                }
+            }
+        }
+
+        .specialDishesSecond {
+            font-family: $font-family;
+            margin-top: 6.25rem;
+
+            .specialDishesHeader {
+                
+                &__paragraph {
+                    margin: 0;
+                    color: #F34949;
+                    font-size: 1.25rem;
+                    line-height: 0.625rem;
+                }
+
+                &__theme {
+                    margin: 0;
+                    font-size: 2.188rem;
+                }
+            }
+
+            .specialDishesContent {
+
+                .specialDishesContentLeft {
+
+                    .dishesNumber {
+
+                        &__theme {
+                            font-size: 3.75rem;
+                        }
+
+                        &__paragraph {
+                            width: 11.25rem;
+                            border-bottom: 0.063rem black solid;
+                            margin-left: 1.25rem;
+                        }
+                    }
+
+                    .dishesContent {
+                        padding-left: 5.938rem;
+
+                        &__beef {
+                            margin: 0;
+                            color: #F34949;
+                            font-size: 1.875rem;
+                            line-height: 0.8;
+                        }
+
+                        &__steak {
+                            margin: 0;
+                            font-size: 1.875rem;
+                        }
+
+                        &__text {
+                            font-size: 1.25rem;
+                            margin: 0.938rem 0 0.938rem 0;
+                        }
+
+                        &__price {
+                            font-size: 1.875rem;
+                            margin: 0 0 1.875rem 0;
+                        }
+
+                        &__button {
+                            border: none;
+                            padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+                            border-radius: 1.25rem;
+                            font-size: 1.25rem;
+                            color: white;
+                            background-color: #F34949;
+                        }
+
+                        &__button:hover {
+                            background-color: #E23838;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .specialDishesContentRight {
+
+                    &__image {
+                        max-width: 100%;
+                        height: 100%; 
+                         
+                    }
+                }
+            }
+        }
+    }
+
+    .menuContainer {
+        font-family: $font-family;
+        padding-left: 12.5rem;
+        padding-right: 12.5rem;
+
+        .menuHeader {
+            margin-top: 100px;
+
+            &__paragraph {
+                font-size: 1.25rem;
+                color: #F34949;
+                margin: 0;
+                line-height: 0.625rem;
+            }
+
+            &__theme {
+                margin: 0;
+                font-size: 2.188rem;
+            }
+        }
+
+        .breakfast {
+
+            .breakfastFirst {
+
+                &__theme {
+                    font-size: 30px;
+                }
             }
         }
     }

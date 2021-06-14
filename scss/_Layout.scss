@@ -1,5 +1,5 @@
 header {
-    
+
     // navigation-bar
     .nav {
         display: grid;
@@ -19,7 +19,7 @@ header {
         }
 
         // logo
-        &__logo {
+        .logo {
             grid-column: 2 / 3;
             display: flex;
             justify-self: center;
@@ -99,3 +99,152 @@ header {
     }
 }
 
+main {
+    .welcome {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .welcomeLeft {
+            grid-column: 1 / 2;
+            display: flex;
+            align-self: center;
+        }
+
+        .welcomeRight {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            
+            .aboutContainer {
+                grid-row: 1 / 2;
+            }
+
+            .recipeContainer {
+                grid-row: 2 / 3;
+            }
+            .welcomeSpecialRecipe {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+    }
+
+    .specialDishesContainer {
+
+        .specialDishesFirst {
+            display: grid;
+            grid-template-rows: 20vh 70vh;
+
+           .specialDishesHeader {
+               grid-row: 1 / 2;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+            } 
+
+           .specialDishesContent {
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               grid-row: 2 / 3;
+
+               .specialDishesContentLeft {
+                    grid-column: 1 / 2;
+                    .dishesNumber {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                .specialDishesContentRight {
+                    display: flex;
+                    justify-content: flex-end;
+                    grid-column: 2 / 3;
+                }
+            }
+        }
+
+        .specialDishesSecond {
+            display: grid;
+            grid-template-rows: 70vh;
+
+           .specialDishesContent {
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+
+               .specialDishesContentLeft {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 3;
+
+                    .dishesNumber {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                .specialDishesContentRight {
+                    grid-column: 1 / 2;
+                    display: flex;
+                    grid-row: 1 / 3;
+                }
+            } 
+        }
+    }
+
+    .menuContainer {
+        display: grid;
+        grid-template-rows: 30vh 70vh;
+
+        .menuHeader {
+            grid-row: 1 / 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .breakfast {
+            grid-row: 2 / 3;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            .breakfastFirst {
+                grid-column: 1 / 2;
+                display: grid;
+                grid-template-rows: repeat(4, 10vh);
+
+                &__theme {
+                    grid-row: 1 / 2;
+                    justify-self: center;
+                    align-self: center;
+                }
+
+                &__one {
+                    grid-row: 2 / 3;
+                    display: grid;
+                    grid-template-columns: 1fr 2fr 1fr;
+                }
+
+                &__two {
+                    grid-row: 3 / 4;
+                    display: grid;
+                    grid-template-columns: 1fr 2fr 1fr;
+                }
+
+                &__three {
+                    grid-row: 4 / 5;
+                    display: grid;
+                    grid-template-columns: 1fr 2fr 1fr;
+                }
+            }
+
+            .breakfastSecond {
+                grid-column: 2 / 3;
+            }
+
+            .breakfastThird {
+                grid-column: 3 / 4;
+            }
+        }
+    }
+}
