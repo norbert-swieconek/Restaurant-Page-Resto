@@ -155,7 +155,8 @@ header {
 
 main {
     .welcome {
-        margin-top: 8.125rem;
+        padding-top: 8.125rem;
+        padding-bottom: 150px;
 
         .welcomeLeft {
             padding-left: 12.5rem;
@@ -234,12 +235,13 @@ main {
     .specialDishesContainer {
         padding-left: 12.5rem;
         padding-right: 12.5rem;
-        margin-bottom: 100px;
+        background: #cdd3d6;
+        padding-bottom: 150px;
+        padding-top: 100px;
         
 
         .specialDishesFirst {
             font-family: $font-family;
-            margin-top: 6.25rem;
 
             .specialDishesHeader {
                 
@@ -414,34 +416,343 @@ main {
     }
 
     .menuContainer {
+        padding-top: 150px;
         font-family: $font-family;
         padding-left: 12.5rem;
         padding-right: 12.5rem;
+        padding-bottom: 150px;
 
-        .menuHeader {
-            margin-top: 100px;
+        .headlineMenu {
 
             &__paragraph {
-                font-size: 1.25rem;
-                color: #F34949;
                 margin: 0;
-                line-height: 0.625rem;
+                color: #F34949;
+                font-size: 18px;
+                line-height: 0.2;
             }
 
             &__theme {
                 margin: 0;
-                font-size: 2.188rem;
+                font-size: 40px;
             }
         }
 
-        .breakfast {
-
-            .breakfastFirst {
+        .breakfastContainer {
+            margin-top: 10px;
+           
+            .breakfast {
+                margin-right: 15px;
 
                 &__theme {
                     font-size: 30px;
+                    font-weight: bold;
+                }
+
+                .foodProposal {
+                    border-bottom: 1px dotted gray;
+                    padding: 10px 0 10px 0;
+                    &__image {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 40px;
+                    }
+
+                    .nameFood {
+
+                        &__dish {
+                            font-size: 30px;
+                            font-weight: lighter;
+                            margin: 0;
+                        }
+
+                        &__description {
+                            font-size: 18px;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    &__price {
+                        font-size: 30px;
+                        font-weight: lighter;
+                        margin: 0 0 0 0;
+                    }
                 }
             }
+
+            .breakfast--second {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+
+            .breakfast--third {
+                margin-left: 15px;
+            }
+
+        }
+    }   
+
+    .opinionsContainer {
+        font-family: $font-family;
+        background-iage: url("../img/testi-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background: black;
+        padding-top: 150px;
+        padding-left: 12.5rem;
+        padding-right: 12.5rem;
+
+        .opinionsHeadline {
+
+            &__name {
+                margin: 0;
+                color: #F34949;
+                font-size: 20px;
+                line-height: 0.5;
+                padding-bottom: 10px;
+            }
+
+            &__theme {
+                margin: 0;
+                color: white;
+            }
+        }
+
+        .opinionsContent {
+            color: white;
+
+            &__sign {
+                font-size: 200px;
+                margin: 0;
+                line-height: 1;
+                height: 150px;
+            }
+
+            &__opinion {
+                font-size: 30px;
+                margin: 0;
+                font-weight: lighter;
+            }
+
+            &__name {
+                font-size: 20px;
+                padding-top: 50px;
+                margin: 0;
+            }
+
+            &__position {
+                font-size: 20px;
+
+                &--color {
+                    color: #F34949;
+                }
+            }
+        }
+    }
+
+    .teamContainer {
+        font-family: $font-family;
+        padding-left: 12.5rem;
+        padding-right: 12.5rem;
+        margin-top: 150px;
+
+        .teamHeadline {
+
+            &__paragraph {
+                color: #F34949;
+                margin: 0;
+                font-size: 18px;
+                line-height: 0.5;
+            }
+
+            &__theme {
+                margin: 0;
+                font-size: 40px;
+            }
+        }
+
+        .cvContainer {
+
+            .chef {
+                
+                &__image {
+                    position: absolute;
+                }
+
+                &__name {
+                    position: relative;
+                    margin-top: 635px;
+                    background-color: white;
+                    width: 460px;
+                    margin-left: 20px;
+                    padding: 20px 0 20px 0;
+
+                    &--headline {
+                        margin: 0;
+                        font-size: 25px;
+                    }
+
+                    &--position {
+                        margin: 0;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .reservationContainer {
+        font-family: $font-family;
+        padding-left: 12.5rem;
+        padding-right: 12.5rem;
+        background-image: url("../img/reservation-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 80vh;
+        position: relative;
+        margin-bottom: 150px;
+
+        .formReservation {
+            background-color: white;
+            width: 300px;
+            padding: 50px 40px 50px 40px;
+            margin-top: 150px;
+            position: absolute;
+            box-shadow: 2px 0px 38px -6px rgba(0,0,0,0.6);
+-webkit-box-shadow: 2px 0px 38px -6px rgba(0,0,0,0.6);
+-moz-box-shadow: 2px 0px 38px -6px rgba(0,0,0,0.6);
+
+            &__paragraph {
+                margin: 0;
+                color: #F34949;
+                font-size: 18px;
+                line-height: 0.5;
+            }
+
+            &__theme {
+                margin: 0;
+                margin-bottom: 30px;
+            }
+
+            &__input {
+                width: 100%;
+                margin-bottom: 15px;
+                padding: 6px;
+                font-size: 18px;
+            }
+
+            &__textarea {
+                min-height: 150px;
+            }
+
+            &__submit {
+                background-color: #F34949;
+                color: white;
+                border: none;
+                border-radius: 20px;
+                font-weight: bold;
+                font-size: 18px;
+                padding: 8px 20px 8px 20px;
+            }
+
+            &__submit:hover {
+                cursor: pointer;
+                background-color: #E23838;
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: 300px;
+    font-family: $font-family;
+    padding-left: 12.5rem;
+    padding-right: 12.5rem;
+
+    .footerInfoFirst {
+
+        &__image {
+            width: 7rem;
+        }
+
+        &__paragraph {
+            font-size: 18px;
+        }
+
+        .iconsInfo {
+            margin-top: 30px;
+
+            &__icon {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .footerInfoSecond {
+
+        .opening {
+            margin-top: 18px;
+
+            .openingDays {
+
+                &__day {
+                    margin: 0;
+                }
+            }
+
+            .openingHours {
+
+                &__hour {
+                    margin: 0;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .footerInfoThird {
+
+        &__theme {
+            margin: 0;
+        }
+
+        &__paragraph {
+            font-size: 18px;
+            margin-top: 18px;
+        }
+
+        .newsletterForm {
+
+            &__input {
+                width: 100%;
+
+                &--email {
+                    margin-bottom: 15px;
+                    padding: 10px 0 10px 10px;
+                }
+
+                &--submit {
+                    background-color: #f34949;
+                    border: none;
+                    color: white;
+                    padding: 10px 0 10px 0;
+                    border-radius: 20px;
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+
+                &--submit:hover {
+                    cursor: pointer;
+                    background-color: #E23838;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 18px;
+
+        &__red {
+            color: #f34949;
         }
     }
 }

@@ -1,3 +1,7 @@
+* {
+    outlne: 1px red solid;
+}
+
 header {
 
     // navigation-bar
@@ -193,9 +197,9 @@ main {
 
     .menuContainer {
         display: grid;
-        grid-template-rows: 30vh 70vh;
+        grid-template-rows: 10vh 50vh;
 
-        .menuHeader {
+        .headlineMenu {
             grid-row: 1 / 2;
             display: flex;
             flex-direction: column;
@@ -203,15 +207,15 @@ main {
             justify-content: center;
         }
 
-        .breakfast {
+        .breakfastContainer {
             grid-row: 2 / 3;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-
-            .breakfastFirst {
-                grid-column: 1 / 2;
+        
+            .breakfast {
                 display: grid;
-                grid-template-rows: repeat(4, 10vh);
+                grid-column: 1 / 2;
+                grid-template-rows: repeat(4, 1fr);
 
                 &__theme {
                     grid-row: 1 / 2;
@@ -219,32 +223,172 @@ main {
                     align-self: center;
                 }
 
-                &__one {
+                .foodProposal {
                     grid-row: 2 / 3;
                     display: grid;
                     grid-template-columns: 1fr 2fr 1fr;
+
+                    &__image {
+                        grid-column: 1 / 2;
+                        align-self: center;
+                        justify-self: center;
+                    }
+
+                    .nameFood {
+                        grid-column: 2 / 3;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+
+                    &__price {
+                        grid-column: 3 / 4;
+                        justify-self: flex-end;
+                        align-self: flex-start;
+                    }
                 }
 
-                &__two {
+                .foodProposal--second {
                     grid-row: 3 / 4;
-                    display: grid;
-                    grid-template-columns: 1fr 2fr 1fr;
                 }
 
-                &__three {
+                .foodProposal--third {
                     grid-row: 4 / 5;
-                    display: grid;
-                    grid-template-columns: 1fr 2fr 1fr;
                 }
             }
 
-            .breakfastSecond {
+            .breakfast--second {
                 grid-column: 2 / 3;
             }
 
-            .breakfastThird {
+            .breakfast--third {
                 grid-column: 3 / 4;
             }
         }
+    }
+
+    .opinionsContainer {
+        display: grid;
+        grid-template-rows: 10vh 50vh;
+        grid-template-columns: 1fr;
+
+        .opinionsHeadline {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .opinionsContent {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .teamContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 90vh;
+
+        .teamHeadline {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cvContainer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-gap: 50px;
+
+            .chef {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+
+                &__name {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: center;
+                }
+            }
+
+            .chefSecond {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+
+            .chefThird {
+                grid-column: 3 / 4;
+                grid-row: 1 / 2;
+            }
+        }
+    }
+
+    .reservationContainer {
+
+        .formReservation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .datetimeReservation {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20vh 10vh;
+    grid-gap: 150px;
+
+    .footerInfoFirst {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .footerInfoSecond {
+
+        &__theme {
+            margin: 0;
+        }
+
+        .opening {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .openingDays {
+                grid-column: 1 / 2;
+            }
+
+            .openingHours {
+                grid-column: 2 / 3;
+            }
+        }
+    }
+
+    .footerInfoThird {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .copyright {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        justify-self: center;
     }
 }
