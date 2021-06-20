@@ -1,5 +1,17 @@
 * {
-    outlne: 1px red solid;
+    ouline: 1px red solid;
+}
+
+// for-nav-right-and-left-menu
+@mixin centerMenuNav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@mixin displayFlex-alignItemsCenter {
+    display: flex;
+    align-items: center;
 }
 
 header {
@@ -16,9 +28,7 @@ header {
             justify-content: flex-end;
 
             .leftMenu {
-                display: flex;
-                align-items: center;
-                gap: 20px;
+                @include centerMenuNav;
             }
         }
 
@@ -36,9 +46,7 @@ header {
             justify-content: flex-start;
 
             .rightMenu {
-                display: flex;
-                align-items: center;
-                gap: 20px;
+                @include centerMenuNav;
             }
         }
     }
@@ -47,51 +55,36 @@ header {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
 
+        // left-site-of-banner
         .leftBanner {
             grid-column: 1 / 2;
             display: grid;
-            grid-template-rows: 30vh 15vh 20vh;
+            grid-template-rows: 30vh 10vh 20vh;
 
+            // We-Love-Delicious-Foods! H1
             &__header {
               grid-row: 1 / 2;
-              display: flex;
-              align-items: center;
-                
+              @include displayFlex-alignItemsCenter;
             }
 
-            // explore and video buttons
+            // explore-and-video-buttons
             .leftBannerButtons {
                grid-row: 2 / 3;
-               display: flex;
-               align-items: center;
+               @include displayFlex-alignItemsCenter;
 
                &__white {
-                   display: flex;
-                   align-items: center;
+                    @include displayFlex-alignItemsCenter;
                }
             }
 
+            // paragraphs-with-icons
             .leftBannerParagraphs {
-                display: flex;
-                align-items: center;
+                @include displayFlex-alignItemsCenter;
                 gap: 20px;
                 
-                .leftBannerDelivery {
-                    display: flex;
+                .leftBannerIcon {
+                    @include displayFlex-alignItemsCenter;
                     flex-direction: column;
-                    align-items: center;
-                }
-
-                .leftBannerFood{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-
-                .leftBannerSupport {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
                 }
             }
         }
@@ -116,7 +109,7 @@ main {
 
         .welcomeRight {
             display: grid;
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 30vh 30vh;
             
             .aboutContainer {
                 grid-row: 1 / 2;
@@ -125,6 +118,7 @@ main {
             .recipeContainer {
                 grid-row: 2 / 3;
             }
+            
             .welcomeSpecialRecipe {
                 display: flex;
                 justify-content: space-between;
@@ -141,22 +135,22 @@ main {
 
            .specialDishesHeader {
                grid-row: 1 / 2;
-               display: flex;
                flex-direction: column;
                justify-content: center;
-               align-items: center;
+               @include displayFlex-alignItemsCenter;
             } 
 
            .specialDishesContent {
                display: grid;
                grid-template-columns: repeat(2, 1fr);
                grid-row: 2 / 3;
+               grid-gap: 50px;
 
                .specialDishesContentLeft {
                     grid-column: 1 / 2;
+
                     .dishesNumber {
-                        display: flex;
-                        align-items: center;
+                        @include displayFlex-alignItemsCenter;
                     }
                 }
 
@@ -175,14 +169,14 @@ main {
            .specialDishesContent {
                display: grid;
                grid-template-columns: repeat(2, 1fr);
+               grid-gap: 50px;
 
                .specialDishesContentLeft {
                     grid-column: 2 / 3;
                     grid-row: 1 / 3;
 
                     .dishesNumber {
-                        display: flex;
-                        align-items: center;
+                        @include displayFlex-alignItemsCenter;
                     }
                 }
 
@@ -201,10 +195,9 @@ main {
 
         .headlineMenu {
             grid-row: 1 / 2;
-            display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            @include displayFlex-alignItemsCenter;
         }
 
         .breakfastContainer {
@@ -275,19 +268,17 @@ main {
         .opinionsHeadline {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            @include displayFlex-alignItemsCenter;
         }
 
         .opinionsContent {
             grid-column: 1 / 2;
             grid-row: 2 / 3;
-            display: flex;
             flex-direction: column;
-            align-items: center;
             text-align: center;
+            @include displayFlex-alignItemsCenter;
         }
     }
 
@@ -299,9 +290,8 @@ main {
         .teamHeadline {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            display: flex;
             flex-direction: column;
-            align-items: center;
+            @include displayFlex-alignItemsCenter;
         }
 
         .cvContainer {
@@ -315,11 +305,10 @@ main {
                 grid-row: 1 / 2;
 
                 &__name {
-                    display: flex;
                     flex-direction: column;
-                    align-items: center;
                     align-content: center;
                     justify-content: center;
+                    @include displayFlex-alignItemsCenter;
                 }
             }
 
@@ -338,9 +327,8 @@ main {
     .reservationContainer {
 
         .formReservation {
-            display: flex;
             flex-direction: column;
-            align-items: center;
+            @include displayFlex-alignItemsCenter;
 
             .datetimeReservation {
                 display: flex;

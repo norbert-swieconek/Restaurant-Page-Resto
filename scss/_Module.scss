@@ -1,24 +1,37 @@
 @import "variables";
 
+@mixin bannerButtons {
+    font-size: 1.125rem;
+    border: none;
+    padding: 0.5rem 1.375rem 0.5rem 1.375rem;
+    font-weight: bold;
+}
+
+@mixin shadow {
+    box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
+    -moz-box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
+}
+
 header {
-    
+
     // navigation-bar
     .nav {
         padding: 1.25rem 0 1.25rem 0;
 
         // left-menu
-        .containerLeft {
+        .containerLeft, .containerRight {
 
-            .leftMenu {
-                color: white;
+            .leftMenu, .rightMenu {
+                list-style-type: none;
                 padding-left: 0;
 
-                .listMenuLeft {
+                .listMenuLeft, .listMenuRight {
 
+                    // a-link
                     &__link {
                         color: black;
                         text-decoration: none;
-                        font-size: 1.25rem;
                         font-family: $font-family;
                     }
 
@@ -36,29 +49,6 @@ header {
                 width: 8.125rem;
             }
         }
-
-        // right-menu
-        .containerRight {
-
-            .rightMenu {
-                color: white;
-                padding-left: 0;
-
-                .listMenuRight {
-                    
-                    &__link {
-                        color: black;
-                        text-decoration: none;
-                        font-size: 1.25rem;
-                        font-family: $font-family;  
-                    }
-
-                    &__link:hover {
-                        color: red;
-                    }
-                }
-            }
-        }
     }
 
     // banner
@@ -66,43 +56,34 @@ header {
 
         // left-site
         .leftBanner {
+
             &__header {
                 font-size: 4rem;
                 margin: 0;
                 font-weight: lighter;
-                font-family: $font-family;
-                padding-left: 12.5rem;    
             }
 
-            // explore and video buttons
+            // explore-and-video-buttons
             .leftBannerButtons {
-                padding-left: 12.5rem; 
 
+                // red-button
                 &__red {
-                    font-size: 1.125rem;
-                    background-color: #F34949;
-                    border: none;
-                    padding: 0.5rem 1.375rem 0.5rem 1.375rem;
+                    background-color: $light-red;
                     color: white;
-                    font-family: $font-family;
-                    font-weight: bold;
                     margin-right: 0;
                     border-radius: 1.25rem;
+                    @include bannerButtons;
                 }
 
                 &__red:hover {
-                    background-color: #E23838;
+                    background-color: $dark-red;
                     cursor: pointer;
                 }
 
+                // white-button
                 &__white {
-                    font-size: 1.125rem;
-                    border: none;
-                    padding: 0.5rem 1.375rem 0.5rem 1.375rem;
                     color: black;
-                    font-family: $font-family;
-                    font-weight: bold;
-                    border-radius: 0.313rem;
+                    @include bannerButtons;
 
                     &--videoLogo {
                         padding-right: 0.313rem;
@@ -111,19 +92,13 @@ header {
 
                 &__white:hover {
                     cursor: pointer;
-                    color: #F34949;
-                }
-
-                &__white:hover {
-
+                    color: $light-red;
                 }
             }
 
             .leftBannerParagraphs {
-                padding-left: 12.5rem;
                 font-size: 1.375rem;
                 font-weight: bold;
-                font-family: $font-family;
 
                 &__theme {  
                     margin: 0;
@@ -142,10 +117,9 @@ header {
             height: 70vh;
             padding-left: 3.125rem;
             display: block;
-            
 
             img {
-                max-width: 100%;
+                width: 100%;
                 height: 100%;
                 padding-right: 12.5rem;
             }
@@ -156,48 +130,38 @@ header {
 main {
     .welcome {
         padding-top: 8.125rem;
-        padding-bottom: 150px;
+        padding-bottom: 9.375rem;
 
         .welcomeLeft {
-            padding-left: 12.5rem;
             height: 75vh;
             margin-right: 3.125rem;
            
             &__image {
                 max-width: 100%;
-                height: 100%;   
+                height: 100%;
+                @include shadow;   
             }
         }
 
         .welcomeRight {
-            padding-right: 12.5rem;
-            padding-top: 6.25rem;
+            padding-top: 6rem;
 
             .aboutContainer{
 
                 &__about {
-                    color: #F34949;
-                    font-size: 1.25rem;
-                    font-family: $font-family;
+                    color: $light-red;
                     margin: 0;
                     line-height: 0.625rem;
                 }
 
                 &__header {
-                    font-family: $font-family;
                     margin: 0;
-                }
-
-                &__text {
-                    font-family: $font-family;
-                    font-size: 1.25rem;
                 }
             }
 
             .recipeContainer{
 
                 &__header {
-                    font-family: $font-family;
                     font-size: 1.75rem;
                 }
 
@@ -206,7 +170,6 @@ main {
                     .welcomeLinkContainer {
 
                         .welcomeLinkRecipe {
-
                             text-decoration: none;
 
                             &__image {
@@ -215,15 +178,13 @@ main {
                             }
 
                             &__paragraph {
-                                color: #F34949;
-                                font-family: $font-family;
-                                font-size: 1.25rem;
+                                color: $light-red;
                                 line-height: 1.25rem;
-                                margin: 10px;
+                                margin: 0.625rem;
                             }
 
                             &__paragraph:hover {
-                                color: #E23838;
+                                color: $dark-red;
                             }
                         }
                     }
@@ -233,22 +194,17 @@ main {
     }
 
     .specialDishesContainer {
-        padding-left: 12.5rem;
-        padding-right: 12.5rem;
-        background: #cdd3d6;
-        padding-bottom: 150px;
-        padding-top: 100px;
-        
+        background-color: #cdd3d6;
+        margin: 0 -12.5rem 0 -12.5rem;
+        padding: 6.25rem 12.5rem 9.375rem 12.5rem;
 
-        .specialDishesFirst {
-            font-family: $font-family;
+        .specialDishesFirst, .specialDishesSecond {
 
             .specialDishesHeader {
                 
                 &__paragraph {
                     margin: 0;
-                    color: #F34949;
-                    font-size: 1.25rem;
+                    color: $light-red;
                     line-height: 0.625rem;
                 }
 
@@ -280,7 +236,7 @@ main {
 
                         &__beef {
                             margin: 0;
-                            color: #F34949;
+                            color: $light-red;
                             font-size: 1.875rem;
                             line-height: 0.8;
                         }
@@ -291,7 +247,6 @@ main {
                         }
 
                         &__text {
-                            font-size: 1.25rem;
                             margin: 0.938rem 0 0.938rem 0;
                         }
 
@@ -304,13 +259,12 @@ main {
                             border: none;
                             padding: 0.625rem 1.25rem 0.625rem 1.25rem;
                             border-radius: 1.25rem;
-                            font-size: 1.25rem;
                             color: white;
-                            background-color: #F34949;
+                            background-color: $light-red;
                         }
 
                         &__button:hover {
-                            background-color: #E23838;
+                            background-color: $dark-red;
                             cursor: pointer;
                         }
                     }
@@ -320,195 +274,107 @@ main {
 
                     &__image {
                         max-width: 100%;
-                        height: 100%;      
+                        height: 100%;
+                        @include shadow;     
                     }
                 }
             }
         }
 
         .specialDishesSecond {
-            font-family: $font-family;
             margin-top: 6.25rem;
-
-            .specialDishesHeader {
-                
-                &__paragraph {
-                    margin: 0;
-                    color: #F34949;
-                    font-size: 1.25rem;
-                    line-height: 0.625rem;
-                }
-
-                &__theme {
-                    margin: 0;
-                    font-size: 2.188rem;
-                }
-            }
-
-            .specialDishesContent {
-
-                .specialDishesContentLeft {
-
-                    .dishesNumber {
-
-                        &__theme {
-                            font-size: 3.75rem;
-                        }
-
-                        &__paragraph {
-                            width: 11.25rem;
-                            border-bottom: 0.063rem black solid;
-                            margin-left: 1.25rem;
-                        }
-                    }
-
-                    .dishesContent {
-                        padding-left: 5.938rem;
-
-                        &__beef {
-                            margin: 0;
-                            color: #F34949;
-                            font-size: 1.875rem;
-                            line-height: 0.8;
-                        }
-
-                        &__steak {
-                            margin: 0;
-                            font-size: 1.875rem;
-                        }
-
-                        &__text {
-                            font-size: 1.25rem;
-                            margin: 0.938rem 0 0.938rem 0;
-                        }
-
-                        &__price {
-                            font-size: 1.875rem;
-                            margin: 0 0 1.875rem 0;
-                        }
-
-                        &__button {
-                            border: none;
-                            padding: 0.625rem 1.25rem 0.625rem 1.25rem;
-                            border-radius: 1.25rem;
-                            font-size: 1.25rem;
-                            color: white;
-                            background-color: #F34949;
-                        }
-
-                        &__button:hover {
-                            background-color: #E23838;
-                            cursor: pointer;
-                        }
-                    }
-                }
-
-                .specialDishesContentRight {
-
-                    &__image {
-                        max-width: 100%;
-                        height: 100%; 
-                         
-                    }
-                }
-            }
         }
     }
 
     .menuContainer {
-        padding-top: 150px;
-        font-family: $font-family;
-        padding-left: 12.5rem;
-        padding-right: 12.5rem;
-        padding-bottom: 150px;
+        padding-top: 9.375rem;
+        padding-bottom: 9.375rem;
 
         .headlineMenu {
 
             &__paragraph {
                 margin: 0;
-                color: #F34949;
-                font-size: 18px;
+                color: $light-red;
+                font-size: 1.125rem;
                 line-height: 0.2;
             }
 
             &__theme {
                 margin: 0;
-                font-size: 40px;
+                font-size: 2.5rem;
             }
         }
 
         .breakfastContainer {
-            margin-top: 10px;
+            margin-top: 0.625rem;
            
             .breakfast {
-                margin-right: 15px;
+                margin-right: 0.938rem;
 
                 &__theme {
-                    font-size: 30px;
+                    font-size: 1.875rem;
                     font-weight: bold;
                 }
 
                 .foodProposal {
-                    border-bottom: 1px dotted gray;
-                    padding: 10px 0 10px 0;
+                    border-bottom: 0.063rem dotted gray;
+                    padding: 0.625rem 0 0.625rem 0;
+
                     &__image {
-                        width: 80px;
-                        height: 80px;
-                        border-radius: 40px;
+                        width: 5rem;
+                        height: 5rem;
+                        border-radius: 2.5rem;
                     }
 
                     .nameFood {
 
                         &__dish {
-                            font-size: 30px;
+                            font-size: 1.875rem;
                             font-weight: lighter;
                             margin: 0;
                         }
 
                         &__description {
-                            font-size: 18px;
-                            margin-top: 5px;
+                            font-size: 1.125rem;
+                            margin-top: 0.313rem;
                         }
                     }
 
                     &__price {
-                        font-size: 30px;
+                        font-size: 1.875rem;
                         font-weight: lighter;
-                        margin: 0 0 0 0;
+                        margin: 0;
                     }
                 }
             }
 
             .breakfast--second {
-                margin-left: 15px;
-                margin-right: 15px;
+                margin-left: 0.938rem;
+                margin-right: 0.938rem;
             }
 
             .breakfast--third {
-                margin-left: 15px;
+                margin-left: 0.938rem;
             }
 
         }
     }   
 
     .opinionsContainer {
-        font-family: $font-family;
-        background-iage: url("../img/testi-bg.jpg");
+        // background-image: url("../img/testi-bg.jpg");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background: black;
-        padding-top: 150px;
-        padding-left: 12.5rem;
-        padding-right: 12.5rem;
+        margin: 0 -12.5rem 0 -12.5rem;
+        padding: 9.375rem 12.5rem 0 12.5rem;
 
         .opinionsHeadline {
 
             &__name {
                 margin: 0;
-                color: #F34949;
-                font-size: 20px;
+                color: $light-red;
                 line-height: 0.5;
-                padding-bottom: 10px;
+                padding-bottom: 0.625rem;
             }
 
             &__theme {
@@ -521,52 +387,47 @@ main {
             color: white;
 
             &__sign {
-                font-size: 200px;
+                font-size: 12.5rem;
                 margin: 0;
                 line-height: 1;
-                height: 150px;
+                height: 9.375rem;
             }
 
             &__opinion {
-                font-size: 30px;
+                font-size: 1.875rem;
                 margin: 0;
                 font-weight: lighter;
             }
 
             &__name {
-                font-size: 20px;
-                padding-top: 50px;
+                padding-top: 3.125rem;
                 margin: 0;
             }
 
             &__position {
-                font-size: 20px;
 
                 &--color {
-                    color: #F34949;
+                    color: $light-red;
                 }
             }
         }
     }
 
     .teamContainer {
-        font-family: $font-family;
-        padding-left: 12.5rem;
-        padding-right: 12.5rem;
-        margin-top: 150px;
+        margin-top: 9.375rem;
 
         .teamHeadline {
 
             &__paragraph {
-                color: #F34949;
+                color: $light-red;
                 margin: 0;
-                font-size: 18px;
+                font-size: 1.125rem;
                 line-height: 0.5;
             }
 
             &__theme {
                 margin: 0;
-                font-size: 40px;
+                font-size: 2.5rem;
             }
         }
 
@@ -580,20 +441,20 @@ main {
 
                 &__name {
                     position: relative;
-                    margin-top: 635px;
+                    margin-top: 39.688rem;
                     background-color: white;
-                    width: 460px;
-                    margin-left: 20px;
-                    padding: 20px 0 20px 0;
+                    width: 28.75rem;
+                    margin-left: 1.25rem;
+                    padding: 1.25rem 0 1.25rem 0;
 
                     &--headline {
                         margin: 0;
-                        font-size: 25px;
+                        font-size: 1.563rem;
                     }
 
                     &--position {
                         margin: 0;
-                        font-size: 18px;
+                        font-size: 1.125rem;
                     }
                 }
             }
@@ -601,88 +462,80 @@ main {
     }
 
     .reservationContainer {
-        font-family: $font-family;
-        padding-left: 12.5rem;
-        padding-right: 12.5rem;
         background-image: url("../img/reservation-bg.jpg");
         background-repeat: no-repeat;
         background-size: 100%;
         height: 80vh;
         position: relative;
-        margin-bottom: 150px;
+        margin: 0 -12.5rem 9.375rem -12.5rem;
+        padding: 0 12.5rem 0 12.5rem;
 
         .formReservation {
             background-color: white;
-            width: 300px;
-            padding: 50px 40px 50px 40px;
-            margin-top: 150px;
+            width: 18.75rem;
+            padding: 3.125rem 2.5rem 3.125rem 2.5rem;
+            margin-top: 9.375rem;
             position: absolute;
-            box-shadow: 2px 0px 38px -6px rgba(0,0,0,0.6);
--webkit-box-shadow: 2px 0px 38px -6px rgba(0,0,0,0.6);
--moz-box-shadow: 2px 0px 38px -6px rgba(0,0,0,0.6);
+            box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
+            -webkit-box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
+            -moz-box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
 
             &__paragraph {
                 margin: 0;
-                color: #F34949;
-                font-size: 18px;
+                color: $light-red;
+                font-size: 1.125rem;
                 line-height: 0.5;
             }
 
             &__theme {
                 margin: 0;
-                margin-bottom: 30px;
+                margin-bottom: 1.875rem;
             }
 
             &__input {
                 width: 100%;
-                margin-bottom: 15px;
-                padding: 6px;
-                font-size: 18px;
+                margin-bottom: 0.938rem;
+                padding: 0.375rem;
+                font-size: 1.125rem;
             }
 
             &__textarea {
-                min-height: 150px;
+                min-height: 9.375rem;
             }
 
             &__submit {
-                background-color: #F34949;
+                background-color: $light-red;
                 color: white;
-                border: none;
-                border-radius: 20px;
-                font-weight: bold;
-                font-size: 18px;
-                padding: 8px 20px 8px 20px;
+                border-radius: 1.25rem;
+                @include bannerButtons;
             }
 
             &__submit:hover {
                 cursor: pointer;
-                background-color: #E23838;
+                background-color: $dark-red;
             }
         }
     }
 }
 
 footer {
-    margin-top: 300px;
-    font-family: $font-family;
-    padding-left: 12.5rem;
-    padding-right: 12.5rem;
+    margin-top: 18.75rem;
 
     .footerInfoFirst {
 
         &__image {
-            width: 7rem;
+            width: 9.375rem;
         }
 
         &__paragraph {
-            font-size: 18px;
+            font-size: 1.125rem;
         }
 
         .iconsInfo {
-            margin-top: 30px;
+            margin-top: 1.875rem;
 
             &__icon {
-                margin-left: 20px;
+                margin-left: 1.25rem;
             }
         }
     }
@@ -690,7 +543,7 @@ footer {
     .footerInfoSecond {
 
         .opening {
-            margin-top: 18px;
+            margin-top: 1.125rem;
 
             .openingDays {
 
@@ -716,8 +569,8 @@ footer {
         }
 
         &__paragraph {
-            font-size: 18px;
-            margin-top: 18px;
+            font-size: 1.125rem;
+            margin-top: 1.125rem;
         }
 
         .newsletterForm {
@@ -726,33 +579,33 @@ footer {
                 width: 100%;
 
                 &--email {
-                    margin-bottom: 15px;
-                    padding: 10px 0 10px 10px;
+                    margin-bottom: 0.938rem;
+                    padding: 0.625rem 0 0.625rem 0.625rem;
                 }
 
                 &--submit {
-                    background-color: #f34949;
+                    background-color: $light-red;
                     border: none;
                     color: white;
-                    padding: 10px 0 10px 0;
-                    border-radius: 20px;
+                    padding: 0.625rem 0 0.625rem 0;
+                    border-radius: 1.25rem;
                     font-weight: bold;
-                    font-size: 18px;
+                    font-size: 1.125rem;
                 }
 
                 &--submit:hover {
                     cursor: pointer;
-                    background-color: #E23838;
+                    background-color: $dark-red;
                 }
             }
         }
     }
 
     .copyright {
-        font-size: 18px;
+        font-size: 1.125rem;
 
         &__red {
-            color: #f34949;
+            color: $light-red;
         }
     }
 }

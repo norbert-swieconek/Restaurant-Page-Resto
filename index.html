@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Rest-FwG</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,7 +30,7 @@
     <!-- navigation bar -->
     <nav class="nav">
 
-      <!-- left site -->
+      <!-- left-site-of-nav -->
       <div class="containerLeft">
         <ul class="leftMenu">
           <li class="listMenuLeft">
@@ -45,12 +45,12 @@
         </ul>
       </div>
 
-      <!-- logo -->
+      <!-- logo-middle-nav -->
       <a class="logo" href="#">
         <img class="logo__image" src="img/logo.png" alt="logo">
       </a>
 
-      <!-- right site  -->
+      <!-- right-site-of-nav  -->
       <div class="containerRight">
         <ul class="rightMenu">
           <li class="listMenuRight">
@@ -76,23 +76,23 @@
         <!-- buttons -->
         <div class="leftBannerButtons">
           <button class="leftBannerButtons__red">Explore Menu</button>
-          <button class="leftBannerButtons__white">
+          <button value="Play Video" class="leftBannerButtons__white">
             <img class="leftBannerButtons__white--videoLogo" src="img/play-video.png" alt="play-video">
-            <p>Play Video</p>
+            Play Video
           </button>
         </div>
 
         <!-- paragraphs-with-logo -->
         <div class="leftBannerParagraphs">
-          <div class="leftBannerDelivery">
+          <div class="leftBannerIcon">
             <img src="img/delivery.png" alt="delivery">
             <p class="leftBannerParagraphs__theme">Fast Delivery</p>
           </div>
-          <div class="leftBannerFood">
+          <div class="leftBannerIcon leftBannerFood">
             <img src="img/food.png" alt="Food">
             <p class="leftBannerParagraphs__theme">Fresh Food</p>
           </div>
-          <div class="leftBannerSupport">
+          <div class="leftBannerIcon">
             <img src="img/support.png" alt="support">
             <p class="leftBannerParagraphs__theme"> 24/7 Support</p>
           </div>
@@ -375,15 +375,15 @@
     </div>
 
     <div class="reservationContainer">
-        <form action="" class="formReservation">
+        <form action="#" class="formReservation">
           <p class="formReservation__paragraph">Reservation</p>
           <h1 class="formReservation__theme">Book Now</h1>
           <input class="formReservation__input" type="text" placeholder="Name">
           <input class="formReservation__input" type="email" placeholder="Email">
           <input class="formReservation__input" type="tel" placeholder="Phone">
           <div class="datetimeReservation formReservation__input">
-            <input type="date" placeholder="Date">
-            <input type="time" placeholder="Time">
+            <input type="date">
+            <input type="time">
           </div>
           <select class="formReservation__input">
             <option value="Person" hidden>Person</option>
@@ -394,16 +394,18 @@
             <option value="5">5</option>
           </select>
           <textarea class="formReservation__textarea formReservation__input" placeholder="Your Message..."></textarea>
-          <input class="formReservation__submit "type="submit" value="Send Message">
+          <input class="formReservation__submit" type="submit" value="Send Message">
         </form>
     </div>
   </main>
+
+  <!-- Footer -->
   <footer>
       <div class="footerInfoFirst">
         <img class="footerInfoFirst__image" src="img/logo.png" alt="">
         <p class="footerInfoFirst__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic expedita rem dolores doloribus earum necessitatibus quos, nam voluptate exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores veritatis laudantium distinctio non delectus inventore maiores nostrum debitis? Fugit, consequuntur.</p>
         <div class="iconsInfo">
-          <img class="iconsInfo__icon" src="img/facebook (1).png" alt="">
+          <img class="iconsInfo__icon" src="img/facebook.png" alt="">
           <img class="iconsInfo__icon" src="img/twitter.png" alt="">
           <img class="iconsInfo__icon" src="img/instagram.png" alt="">
         </div>
@@ -434,7 +436,7 @@
       <div class="footerInfoThird">
         <h1 class="footerInfoThird__theme">Newsletter</h1>
         <p class="footerInfoThird__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, tempora.</p>
-        <form class="newsletterForm" action="">
+        <form class="newsletterForm" action="#">
           <input placeholder="Eneter email" class="newsletterForm__input newsletterForm__input--email" type="email">
           <input value="Submit" class="newsletterForm__input newsletterForm__input--submit" type="submit">
         </form>
