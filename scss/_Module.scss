@@ -1,0 +1,611 @@
+@import "variables";
+
+@mixin bannerButtons {
+    font-size: 1.125rem;
+    border: none;
+    padding: 0.5rem 1.375rem 0.5rem 1.375rem;
+    font-weight: bold;
+}
+
+@mixin shadow {
+    box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
+    -moz-box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
+}
+
+header {
+
+    // navigation-bar
+    .nav {
+        padding: 1.25rem 0 1.25rem 0;
+
+        // left-menu
+        .containerLeft, .containerRight {
+
+            .leftMenu, .rightMenu {
+                list-style-type: none;
+                padding-left: 0;
+
+                .listMenuLeft, .listMenuRight {
+
+                    // a-link
+                    &__link {
+                        color: black;
+                        text-decoration: none;
+                        font-family: $font-family;
+                    }
+
+                    &__link:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+        // logo
+        .logo {
+
+            &__image {
+                width: 8.125rem;
+            }
+        }
+    }
+
+    // banner
+    .banner {
+
+        // left-site
+        .leftBanner {
+
+            &__header {
+                font-size: 4rem;
+                margin: 0;
+                font-weight: lighter;
+            }
+
+            // explore-and-video-buttons
+            .leftBannerButtons {
+
+                // red-button
+                &__red {
+                    background-color: $light-red;
+                    color: white;
+                    margin-right: 0;
+                    border-radius: 1.25rem;
+                    @include bannerButtons;
+                }
+
+                &__red:hover {
+                    background-color: $dark-red;
+                    cursor: pointer;
+                }
+
+                // white-button
+                &__white {
+                    color: black;
+                    @include bannerButtons;
+
+                    &--videoLogo {
+                        padding-right: 0.313rem;
+                    }
+                }
+
+                &__white:hover {
+                    cursor: pointer;
+                    color: $light-red;
+                }
+            }
+
+            .leftBannerParagraphs {
+                font-size: 1.375rem;
+                font-weight: bold;
+
+                &__theme {  
+                    margin: 0;
+                }
+
+                .leftBannerFood {
+                    border-left: 0.063rem solid #bfc7cf;
+                    border-right: 0.063rem solid #bfc7cf;
+                    padding: 0 1.25rem 0 1.25rem;
+                }
+            }
+        }
+
+        // right-site
+        &__right {
+            height: 70vh;
+            padding-left: 3.125rem;
+            display: block;
+
+            img {
+                width: 100%;
+                height: 100%;
+                padding-right: 12.5rem;
+            }
+        }
+    }
+}
+
+main {
+    .welcome {
+        padding-top: 8.125rem;
+        padding-bottom: 9.375rem;
+
+        .welcomeLeft {
+            height: 75vh;
+            margin-right: 3.125rem;
+           
+            &__image {
+                max-width: 100%;
+                height: 100%;
+                @include shadow;   
+            }
+        }
+
+        .welcomeRight {
+            padding-top: 6rem;
+
+            .aboutContainer{
+
+                &__about {
+                    color: $light-red;
+                    margin: 0;
+                    line-height: 0.625rem;
+                }
+
+                &__header {
+                    margin: 0;
+                }
+            }
+
+            .recipeContainer{
+
+                &__header {
+                    font-size: 1.75rem;
+                }
+
+                .welcomeSpecialRecipe {
+
+                    .welcomeLinkContainer {
+
+                        .welcomeLinkRecipe {
+                            text-decoration: none;
+
+                            &__image {
+                                height: 11.25rem;
+                                width: 11.25rem;
+                            }
+
+                            &__paragraph {
+                                color: $light-red;
+                                line-height: 1.25rem;
+                                margin: 0.625rem;
+                            }
+
+                            &__paragraph:hover {
+                                color: $dark-red;
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+    }
+
+    .specialDishesContainer {
+        background-color: #cdd3d6;
+        margin: 0 -12.5rem 0 -12.5rem;
+        padding: 6.25rem 12.5rem 9.375rem 12.5rem;
+
+        .specialDishesFirst, .specialDishesSecond {
+
+            .specialDishesHeader {
+                
+                &__paragraph {
+                    margin: 0;
+                    color: $light-red;
+                    line-height: 0.625rem;
+                }
+
+                &__theme {
+                    margin: 0;
+                    font-size: 2.188rem;
+                }
+            }
+
+            .specialDishesContent {
+
+                .specialDishesContentLeft {
+
+                    .dishesNumber {
+
+                        &__theme {
+                            font-size: 3.75rem;
+                        }
+
+                        &__paragraph {
+                            width: 11.25rem;
+                            border-bottom: 0.063rem black solid;
+                            margin-left: 1.25rem;
+                        }
+                    }
+
+                    .dishesContent {
+                        padding-left: 5.938rem;
+
+                        &__beef {
+                            margin: 0;
+                            color: $light-red;
+                            font-size: 1.875rem;
+                            line-height: 0.8;
+                        }
+
+                        &__steak {
+                            margin: 0;
+                            font-size: 1.875rem;
+                        }
+
+                        &__text {
+                            margin: 0.938rem 0 0.938rem 0;
+                        }
+
+                        &__price {
+                            font-size: 1.875rem;
+                            margin: 0 0 1.875rem 0;
+                        }
+
+                        &__button {
+                            border: none;
+                            padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+                            border-radius: 1.25rem;
+                            color: white;
+                            background-color: $light-red;
+                        }
+
+                        &__button:hover {
+                            background-color: $dark-red;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .specialDishesContentRight {
+
+                    &__image {
+                        max-width: 100%;
+                        height: 100%;
+                        @include shadow;     
+                    }
+                }
+            }
+        }
+
+        .specialDishesSecond {
+            margin-top: 6.25rem;
+        }
+    }
+
+    .menuContainer {
+        padding-top: 9.375rem;
+        padding-bottom: 9.375rem;
+
+        .headlineMenu {
+
+            &__paragraph {
+                margin: 0;
+                color: $light-red;
+                font-size: 1.125rem;
+                line-height: 0.2;
+            }
+
+            &__theme {
+                margin: 0;
+                font-size: 2.5rem;
+            }
+        }
+
+        .breakfastContainer {
+            margin-top: 0.625rem;
+           
+            .breakfast {
+                margin-right: 0.938rem;
+
+                &__theme {
+                    font-size: 1.875rem;
+                    font-weight: bold;
+                }
+
+                .foodProposal {
+                    border-bottom: 0.063rem dotted gray;
+                    padding: 0.625rem 0 0.625rem 0;
+
+                    &__image {
+                        width: 5rem;
+                        height: 5rem;
+                        border-radius: 2.5rem;
+                    }
+
+                    .nameFood {
+
+                        &__dish {
+                            font-size: 1.875rem;
+                            font-weight: lighter;
+                            margin: 0;
+                        }
+
+                        &__description {
+                            font-size: 1.125rem;
+                            margin-top: 0.313rem;
+                        }
+                    }
+
+                    &__price {
+                        font-size: 1.875rem;
+                        font-weight: lighter;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .breakfast--second {
+                margin-left: 0.938rem;
+                margin-right: 0.938rem;
+            }
+
+            .breakfast--third {
+                margin-left: 0.938rem;
+            }
+
+        }
+    }   
+
+    .opinionsContainer {
+        // background-image: url("../img/testi-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background: black;
+        margin: 0 -12.5rem 0 -12.5rem;
+        padding: 9.375rem 12.5rem 0 12.5rem;
+
+        .opinionsHeadline {
+
+            &__name {
+                margin: 0;
+                color: $light-red;
+                line-height: 0.5;
+                padding-bottom: 0.625rem;
+            }
+
+            &__theme {
+                margin: 0;
+                color: white;
+            }
+        }
+
+        .opinionsContent {
+            color: white;
+
+            &__sign {
+                font-size: 12.5rem;
+                margin: 0;
+                line-height: 1;
+                height: 9.375rem;
+            }
+
+            &__opinion {
+                font-size: 1.875rem;
+                margin: 0;
+                font-weight: lighter;
+            }
+
+            &__name {
+                padding-top: 3.125rem;
+                margin: 0;
+            }
+
+            &__position {
+
+                &--color {
+                    color: $light-red;
+                }
+            }
+        }
+    }
+
+    .teamContainer {
+        margin-top: 9.375rem;
+
+        .teamHeadline {
+
+            &__paragraph {
+                color: $light-red;
+                margin: 0;
+                font-size: 1.125rem;
+                line-height: 0.5;
+            }
+
+            &__theme {
+                margin: 0;
+                font-size: 2.5rem;
+            }
+        }
+
+        .cvContainer {
+
+            .chef {
+                
+                &__image {
+                    position: absolute;
+                }
+
+                &__name {
+                    position: relative;
+                    margin-top: 39.688rem;
+                    background-color: white;
+                    width: 28.75rem;
+                    margin-left: 1.25rem;
+                    padding: 1.25rem 0 1.25rem 0;
+
+                    &--headline {
+                        margin: 0;
+                        font-size: 1.563rem;
+                    }
+
+                    &--position {
+                        margin: 0;
+                        font-size: 1.125rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .reservationContainer {
+        background-image: url("../img/reservation-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 80vh;
+        position: relative;
+        margin: 0 -12.5rem 9.375rem -12.5rem;
+        padding: 0 12.5rem 0 12.5rem;
+
+        .formReservation {
+            background-color: white;
+            width: 18.75rem;
+            padding: 3.125rem 2.5rem 3.125rem 2.5rem;
+            margin-top: 9.375rem;
+            position: absolute;
+            box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
+            -webkit-box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
+            -moz-box-shadow: 2px 0 38px -6px rgba(0,0,0,0.6);
+
+            &__paragraph {
+                margin: 0;
+                color: $light-red;
+                font-size: 1.125rem;
+                line-height: 0.5;
+            }
+
+            &__theme {
+                margin: 0;
+                margin-bottom: 1.875rem;
+            }
+
+            &__input {
+                width: 100%;
+                margin-bottom: 0.938rem;
+                padding: 0.375rem;
+                font-size: 1.125rem;
+            }
+
+            &__textarea {
+                min-height: 9.375rem;
+            }
+
+            &__submit {
+                background-color: $light-red;
+                color: white;
+                border-radius: 1.25rem;
+                @include bannerButtons;
+            }
+
+            &__submit:hover {
+                cursor: pointer;
+                background-color: $dark-red;
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: 18.75rem;
+
+    .footerInfoFirst {
+
+        &__image {
+            width: 9.375rem;
+        }
+
+        &__paragraph {
+            font-size: 1.125rem;
+        }
+
+        .iconsInfo {
+            margin-top: 1.875rem;
+
+            &__icon {
+                margin-left: 1.25rem;
+            }
+        }
+    }
+
+    .footerInfoSecond {
+
+        .opening {
+            margin-top: 1.125rem;
+
+            .openingDays {
+
+                &__day {
+                    margin: 0;
+                }
+            }
+
+            .openingHours {
+
+                &__hour {
+                    margin: 0;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .footerInfoThird {
+
+        &__theme {
+            margin: 0;
+        }
+
+        &__paragraph {
+            font-size: 1.125rem;
+            margin-top: 1.125rem;
+        }
+
+        .newsletterForm {
+
+            &__input {
+                width: 100%;
+
+                &--email {
+                    margin-bottom: 0.938rem;
+                    padding: 0.625rem 0 0.625rem 0.625rem;
+                }
+
+                &--submit {
+                    background-color: $light-red;
+                    border: none;
+                    color: white;
+                    padding: 0.625rem 0 0.625rem 0;
+                    border-radius: 1.25rem;
+                    font-weight: bold;
+                    font-size: 1.125rem;
+                }
+
+                &--submit:hover {
+                    cursor: pointer;
+                    background-color: $dark-red;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 1.125rem;
+
+        &__red {
+            color: $light-red;
+        }
+    }
+}

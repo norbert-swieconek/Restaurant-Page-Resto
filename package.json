@@ -1,0 +1,45 @@
+{
+  "name": "Resto-FwG",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "build": "gulp",
+    "dev": "npm run build && npm run start",
+    "start": "gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-changed": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "parcel-bundler": "^1.12.4"
+  },
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eGzIT/Resto-FwG.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eGzIT/Resto-FwG/issues"
+  },
+  "homepage": "https://github.com/eGzIT/Resto-FwG#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "jquery": "^3.6.0"
+  }
+}
