@@ -303,6 +303,8 @@ main {
             .chef {
                 grid-column: 1 / 2;
                 grid-row: 1 / 2;
+                display: flex;
+                flex: wrap;
 
                 &__name {
                     flex-direction: column;
@@ -311,6 +313,8 @@ main {
                     @include displayFlex-alignItemsCenter;
                 }
             }
+
+    
 
             .chefSecond {
                 grid-column: 2 / 3;
