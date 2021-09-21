@@ -84,6 +84,7 @@ header {
                 &__white {
                     color: black;
                     @include bannerButtons;
+                    background-color: white;
 
                     &--videoLogo {
                         padding-right: 0.313rem;
@@ -194,7 +195,7 @@ main {
     }
 
     .specialDishesContainer {
-        background-color: #cdd3d6;
+        background-color: #F7F8F9;
         margin: 0 -12.5rem 0 -12.5rem;
         padding: 6.25rem 12.5rem 9.375rem 12.5rem;
 
@@ -361,13 +362,10 @@ main {
     }   
 
     .opinionsContainer {
-        // background-image: url("../img/testi-bg.jpg");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
         background: black;
         margin: 0 -12.5rem 0 -12.5rem;
         padding: 9.375rem 12.5rem 0 12.5rem;
-
+        
         .opinionsHeadline {
 
             &__name {
@@ -432,29 +430,34 @@ main {
         }
 
         .cvContainer {
-
+            
             .chef {
+                position: relative;
                 
                 &__image {
-                    position: absolute;
+                    max-width: 100%;
+                    max-height: 700px;
                 }
 
                 &__name {
-                    position: relative;
-                    margin-top: 39.688rem;
-                    background-color: white;
-                    width: 28.75rem;
-                    margin-left: 1.25rem;
-                    padding: 1.25rem 0 1.25rem 0;
+                    position: absolute;
+                    background: #fff;
+                    width: auto;
+                    left: 15px;
+                    bottom: 105px;
+                    right: 15px;
+                    text-align: center;
+                    padding: 15px;
+                    height: 80px;
+                    overflow: hidden;
+                    transition: all .3s ease-in-out;
 
                     &--headline {
                         margin: 0;
-                        font-size: 1.563rem;
                     }
 
                     &--position {
                         margin: 0;
-                        font-size: 1.125rem;
                     }
                 }
             }
@@ -519,7 +522,7 @@ main {
 }
 
 footer {
-    margin-top: 18.75rem;
+    margin-top: 15.75rem;
 
     .footerInfoFirst {
 
