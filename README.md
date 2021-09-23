@@ -1,5 +1,5 @@
 # Restaurant page - Resto
-This project is not mobile friendly.<br>
+This project is not mobile friendly. RWD incoming. <br> 
 
 ## Available Scripts
 In the project directory, you can run:
