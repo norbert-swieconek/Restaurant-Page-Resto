@@ -1,4 +1,6 @@
 # Restaurant page - Resto
+This project is not mobiles friendly.<br>
+
 ## Available Scripts
 In the project directory, you can run:
 
