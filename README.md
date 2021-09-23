@@ -1,4 +1,7 @@
 # Restaurant page - Resto
+## Available Scripts
+`test`
+
 ## Build With
   * SCSS
   * BEM
