@@ -8,7 +8,7 @@ Open http://localhost:3000 to view it in the browser.
 
 The page will reload if you make edits.
 
-!Important
+!Important </br>
 You need to change path of css to dist in the main html. 
 
 Example:
